@@ -18,7 +18,7 @@
   "scripts": {
     "clean": "rm -rf .cache && rm -rf dist",
     "dev": "npm run clean && parcel app/index.html -d dist",
-    "build": "npm run clean && parcel build app/index.html --public-url / && mv dist/countey.html dist/index.html",
+    "build": "npm run clean && parcel build app/index.html --public-url ./ && mv dist/countey.html dist/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
