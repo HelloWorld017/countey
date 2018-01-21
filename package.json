@@ -1,0 +1,39 @@
+{
+  "name": "countey",
+  "version": "1.0.0",
+  "description": "A simple counter",
+  "main": "app/index.html",
+  "dependencies": {
+    "vue": "^2.5.13"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "parcel-bundler": "^1.4.1",
+    "parcel-plugin-vue": "^1.5.0",
+    "postcss": "^6.0.16",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "scripts": {
+    "clean": "rm -rf .cache && rm -rf dist",
+    "dev": "npm run clean && parcel app/index.html -d dist",
+    "build": "npm run clean && parcel build app/index.html --public-url / && mv dist/countey.html dist/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelloWorld017/countey.git"
+  },
+  "keywords": [
+    "counter",
+    "countdown",
+    "timer"
+  ],
+  "author": "Khinenw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HelloWorld017/countey/issues"
+  },
+  "homepage": "https://github.com/HelloWorld017/countey#readme"
+}
