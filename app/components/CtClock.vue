@@ -2,8 +2,7 @@
 	<div class="ct-clock">
 		<template v-if="animate">
 			<div class="numbers">
-				<ct-number :number="numbers[0]"></ct-number>
-				<ct-number :number="numbers[1]"></ct-number>
+				<ct-number v-for="count in (counts)" :number="numbers[count - 1]"></ct-number>
 			</div>
 		</template>
 		<span class="left" v-else>
@@ -70,12 +69,17 @@
 
 			animate: {
 				type: Boolean
+			},
+			
+			counts: {
+				type: Number,
+				default: 2
 			}
 		},
 
 		methods: {
-			pad2(i) {
-				return i.toString().length < 2 ? `0${i}` : `${i}`;
+			padn(n, i) {
+				return i.toString().padStart(n, '0');
 			},
 
 			floorToZero(i) {
@@ -85,7 +89,7 @@
 
 		computed: {
 			left() {
-				return this.pad2(Math.abs(this.floorToZero((this.target - this.current) / this.unit) % this.unitBase));
+				return this.padn(this.counts, Math.abs(this.floorToZero((this.target - this.current) / this.unit) % this.unitBase));
 			},
 
 			numbers() {

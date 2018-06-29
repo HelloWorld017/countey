@@ -1,17 +1,13 @@
 <template>
 	<section class="countey">
 		<ct-divider class="minus" divider="-" v-if="isMinus"></ct-divider>
-		<ct-clock :unit="604800000" unit-name="Weeks" :target="target" :current="current" animate />
-		<ct-divider></ct-divider>
-		<ct-clock :unit="86400000" unit-name="Days" :unit-base="7" :target="target" :current="current" animate />
+		<ct-clock :unit="86400000" unit-name="Days" :target="target" :current="current" :counts="3" animate />
 		<ct-divider></ct-divider>
 		<ct-clock :unit="3600000" unit-name="Hours" :unit-base="24" :target="target" :current="current" animate />
 		<ct-divider></ct-divider>
 		<ct-clock :unit="60000" unit-name="Minutes" :unit-base="60" :target="target" :current="current" animate />
 		<ct-divider></ct-divider>
 		<ct-clock :unit="1000" unit-name="Seconds" :unit-base="60" :target="target" :current="current" animate />
-		<ct-divider divider="."></ct-divider>
-		<ct-clock :unit="10" unit-name="Centiseconds" :unit-base="100" :target="target" :current="current" />
 	</section>
 </template>
 
