@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<countey></countey>
+		<clockey></clockey>
 	</div>
 </template>
 
@@ -31,11 +31,11 @@
 </style>
 
 <script>
-	import Countey from "./components/Countey.vue";
+	import Clockey from "./components/Clockey.vue";
 
 	export default {
 		components: {
-			Countey
+			Clockey
 		}
 	};
 </script>
